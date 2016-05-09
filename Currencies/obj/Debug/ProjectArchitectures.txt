@@ -1,0 +1,1 @@
+F:\Programowanie\MOJE PROJEKTY\C#\Currencies\Currencies\Currencies.csproj;neutral
