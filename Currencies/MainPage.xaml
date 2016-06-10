@@ -9,15 +9,18 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <ComboBox x:Name="comboBox" PlaceholderText="Wybierz walutę bazową" SelectionChanged="comboBox_SelectionChanged" Margin="80,50,80,0" VerticalAlignment="Top">
-            <ComboBoxItem Content="EUR" HorizontalAlignment="Left" Width="100"/>
-            <ComboBoxItem Content="USD" HorizontalAlignment="Left" Width="100"/>
-            <ComboBoxItem Content="PLN" HorizontalAlignment="Left" Width="100"/>
-            <ComboBoxItem Content="GBP" HorizontalAlignment="Left" Width="100"/>
+        <Viewbox StretchDirection="Both" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="100">
+            <TextBlock x:Name="CurrenciesTextBlock"/>
+        </Viewbox>
+        <Viewbox StretchDirection="Both" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="100,0">
+            <TextBlock x:Name="DateTextBlock"/>
+        </Viewbox>
+        <ComboBox x:Name="comboBox" PlaceholderText="Wybierz walutę bazową" SelectionChanged="comboBox_SelectionChanged" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="25" Width="230">
+            <ComboBoxItem Content="EUR" Width="230"/>
+            <ComboBoxItem Content="USD" Width="230"/>
+            <ComboBoxItem Content="PLN" Width="230"/>
+            <ComboBoxItem Content="GBP" Width="230"/>
         </ComboBox>
-        
-        <TextBlock x:Name="DateTextBlock" FontSize="25" Margin="0,275,0,0" HorizontalAlignment="Center"/>
-        <TextBlock x:Name="CurrenciesTextBlock" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="200" Height="200" Margin="0,0,0,200"/>
-
+        <ProgressBar x:Name="ProgressBar" HorizontalAlignment="Stretch" VerticalAlignment="Top" Visibility="Collapsed"/>
     </Grid>
 </Page>
